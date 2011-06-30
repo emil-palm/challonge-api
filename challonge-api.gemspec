@@ -22,6 +22,7 @@ Gem::Specification.new do |s|
     "README",
     "Rakefile",
     "VERSION",
+    "challonge-api.gemspec",
     "lib/challonge-api.rb",
     "lib/challonge/api.rb",
     "lib/challonge/match.rb",
