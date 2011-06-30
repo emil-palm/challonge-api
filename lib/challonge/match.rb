@@ -20,7 +20,7 @@ class Challonge::Match < Challonge::API
   end
   
   def player_winner? (participant)
-    (participant.id != self.winner_id)
+    (participant.id == self.winner_id)
   end
 
   # not implemented by API

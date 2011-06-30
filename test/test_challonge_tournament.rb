@@ -20,10 +20,6 @@ class TestChallongeTournament < Test::Unit::TestCase
       assert_instance_of(Array, @tourney.matches, "Not getting any matches")
     end
     
-    # should "fetch the array of active matches" do
-    #   assert(@tourney.matches({:state => 'open'}).length > 0, "Not getting any open matches")
-    # end
-    
     should "fetch the array of participants" do
       assert_instance_of(Array, @tourney.participants, "")
     end
