@@ -6,6 +6,10 @@ class TestChallongeTournament < Test::Unit::TestCase
       @tourney = Challonge::Tournament.find("double_elm_test")
     end
     
+    teardown do
+      @tourney.reset!
+    end
+    
     should "fetch the double-elim-test tournament" do
 	    assert_not_nil(@tourney, "Failed to retrieve double_elm_test tournament")
     end

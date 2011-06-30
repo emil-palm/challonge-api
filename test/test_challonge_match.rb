@@ -3,8 +3,13 @@ require 'helper'
 class TestChallongeMatch < Test::Unit::TestCase
   context "a match" do
     setup do
-      t = Challonge::Tournament.find("double_elm_test")
-      @match = t.matches.first
+      @t = Challonge::Tournament.find("double_elm_test")
+      @t.start!
+      @match = @t.matches.first
+    end
+    
+    teardown do
+      @t.reset!
     end
 
     should "get players of this match" do
