@@ -27,8 +27,8 @@ class Challonge::Tournament < Challonge::API
     Challonge::Participant.find(scope, :params => {:tournament_id => self.id})
   end
 
-  def matches(scope = :all)
-    Challonge::Match.find(scope, :params => {:tournament_id => self.id})
+  def matches(options={})
+    Challonge::Match.find((options[:scope] ? options[:scope] : :all), :params => {:tournament_id => self.id}.merge(options))
   end
 
   protected

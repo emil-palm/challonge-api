@@ -4,7 +4,7 @@ class TestChallongeParticipant < Test::Unit::TestCase
   context "a participant" do
     setup do
       @t = Challonge::Tournament.find("double_elm_test")
-      @t.start!
+      @t.start! 
       m = @t.matches.first
 
       @mParticipant1 = m.player1
