@@ -25,6 +25,10 @@ Get a filtered set of tournaments:
 
   Challonge::Tournament.find(:all, :params => {:state => 'in_progress'})
 
+Get a filtered set of matches in a tournament:
+  t = Challonge::Tournament.find(:first)
+  t.matches({:state => :open})
+
 Run a basic tournament from start to finish:
 
   t = Challonge::Tournament.new
